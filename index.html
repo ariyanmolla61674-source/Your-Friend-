@@ -1,0 +1,95 @@
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Your Help - Personal Portfolio | Kolkata</title>  
+    <style>  
+        * { margin: 0; padding: 0; box-sizing: border-box; }  
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }  
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; }  
+        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }  
+        nav h1 { font-size: 1.5rem; }  
+        nav ul { display: flex; list-style: none; }  
+        nav li { margin-left: 2rem; }  
+        nav a { color: white; text-decoration: none; transition: opacity 0.3s; }  
+        nav a:hover { opacity: 0.8; }  
+        section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }  
+        #home { background: #f4f4f4; text-align: center; padding-top: 8rem; }  
+        #home h2 { font-size: 3rem; margin-bottom: 1rem; }  
+        #about, #projects, #contact { background: white; margin: 2rem 0; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }  
+        h3 { color: #667eea; margin-bottom: 1rem; }  
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }  
+        .project { background: #f9f9f9; padding: 1.5rem; border-radius: 8px; text-align: center; }  
+        form { display: flex; flex-direction: column; max-width: 500px; margin: 0 auto; }  
+        input, textarea { margin-bottom: 1rem; padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px; }  
+        button { background: #667eea; color: white; padding: 1rem; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; }  
+        button:hover { background: #5a67d8; }  
+        @media (max-width: 768px) { nav ul { flex-direction: column; } #home h2 { font-size: 2rem; } }  
+    </style>  
+</head>  
+<body>  
+    <header>  
+        <nav>  
+            <h1>Your Help</h1>  
+            <ul>  
+                <li><a href="#home">Home</a></li>  
+                <li><a href="#about">About</a></li>  
+                <li><a href="#projects">Projects</a></li>  
+                <li><a href="#contact">Contact</a></li>  
+            </ul>  
+        </nav>  
+    </header>  <section id="home">  
+    <h2>Welcome, I'm Your Friend from Kolkata</h2>  
+    <p>Web developer & creator building cool things. Let's connect!</p>  
+</section>  
+
+<section id="about">  
+    <h3>About Me</h3>  
+    <p>Hi, I'm Your Friend from Kolkata, West Bengal. Passionate about coding websites and apps. Experienced in HTML, CSS, JS, and more. Open to collaborations!</p>  
+</section>  
+
+<section id="projects">  
+    <h3>My Projects</h3>  
+    <div class="projects-grid">  
+        <div class="project">  
+            <h4>Project 1</h4>  
+            <p>A responsive portfolio site. Built with pure HTML/CSS/JS.</p>  
+        </div>  
+        <div class="project">  
+            <h4>Project 2</h4>  
+            <p>E-commerce landing page. Modern design and smooth animations.</p>  
+        </div>  
+        <div class="project">  
+            <h4>Project 3</h4>  
+            <p>Weather app integration. Using APIs for real-time data.</p>  
+        </div>  
+    </div>  
+</section>  
+
+<section id="contact">  
+    <h3>Contact Me</h3>  
+    <form id="contactForm">  
+        <input type="text" placeholder="Your Name" required>  
+        <input type="email" placeholder="Your Email" required>  
+        <textarea rows="5" placeholder="Your Message" required></textarea>  
+        <button type="submit">Send Message</button>  
+    </form>  
+</section>  
+
+<script>  
+    // Smooth scrolling  
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {  
+        anchor.addEventListener('click', function (e) {  
+            e.preventDefault();  
+            document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });  
+        });  
+    });  
+    // Form submission (demo alert)  
+    document.getElementById('contactForm').addEventListener('submit', function(e) {  
+        e.preventDefault();  
+        alert('Thanks for your message! (Demo - integrate with EmailJS or Formspree for real sends)');  
+    });  
+</script>
+
+</body>  
+  </html>
